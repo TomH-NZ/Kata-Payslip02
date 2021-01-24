@@ -6,7 +6,7 @@ namespace Payslipv02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Create Payslip");
         }
     }
 }
