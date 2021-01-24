@@ -84,7 +84,7 @@ It should be able to process the following csv input and generate the expected o
 
 Example File Formats:  
 
-* [Sample Input File](sample_input.csv)  
-* [Sample Output File](sample_output.csv)  
+* [Sample Input File] (https://github.com/MYOB-Technology/General_Developer/blob/main/katas/kata-payslip/sample_input.csv)
+* [Sample Output File] (https://github.com/MYOB-Technology/General_Developer/blob/main/katas/kata-payslip/sample_output.csv)
 
 ------------------------------------------------------------------------------------------------------------
