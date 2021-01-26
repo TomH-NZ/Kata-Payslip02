@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Payslipv02UnitTests
 {
-    public class UnitTest1
+    public class PayslipShould
     {
         [Fact]
         public void Test1()
