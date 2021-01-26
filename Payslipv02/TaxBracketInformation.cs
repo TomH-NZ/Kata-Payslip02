@@ -1,6 +1,6 @@
 namespace Payslipv02
 {
-    public class BracketInformation
+    public class TaxBracketInformation
     {
        //Array layout is upper tax bracket, lower tax bracket, tax percent and previous tax amount
        double[] EighteenThousandTwoHundred = { 18200, 0, 0, 0};
