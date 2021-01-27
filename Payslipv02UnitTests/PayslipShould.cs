@@ -22,18 +22,23 @@ namespace Payslipv02UnitTests
             //Assert
             Assert.Equal(expected, result);
         }
+        
 
-        [Fact]
-        public void ReturnTaxAmountOf922WhenGivenAnAnnualSalaryOf60050()
+        [Theory]
+        [InlineData(60050, 922)]
+        [InlineData(30000, 187)]
+        [InlineData(100000, 2053)]
+        [InlineData(200000, 5269)]
+        public void ReturnCorrectPeriodTaxAmountWhenGivenAnAnnualSalary(double annualSalary, double expected)
         {
             //Arrange
             var tax = new Tax();
 
             //Act
-            var result = tax.Calculate(60050);
+            var result = tax.Calculate(annualSalary);
 
             //Assert
-            Assert.Equal(922, result);
+            Assert.Equal(expected, result);
         }
     }
 }
