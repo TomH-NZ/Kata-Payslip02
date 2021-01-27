@@ -14,23 +14,26 @@ namespace Payslipv02UnitTests
         public void ReturnCorrectSuperannuationAmountWhenGivenPayPeriodAmount(double payPeriodAmount, double expected)
         {
             //Arrange
-            var Super = new Superannuation();
+            var super = new Superannuation();
             
             //Act
-            var result = Super.CalculateValue(payPeriodAmount);
+            var result = super.CalculateValue(payPeriodAmount);
             
             //Assert
             Assert.Equal(expected, result);
         }
 
         [Fact]
-        public void ReturnTaxRateOf37PercentWhenGivenIncomeOfOneHundredThousand()
+        public void ReturnTaxAmountOf922WhenGivenAnAnnualSalaryOf60050()
         {
             //Arrange
-            
+            var tax = new Tax();
+
             //Act
-            
+            var result = tax.Calculate(60050);
+
             //Assert
+            Assert.Equal(922, result);
         }
     }
 }
