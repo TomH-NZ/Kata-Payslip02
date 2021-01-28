@@ -1,5 +1,6 @@
 using System;
 using Payslipv02;
+using Payslipv02.Superannuation;
 using Payslipv02.Tax;
 using Xunit;
 

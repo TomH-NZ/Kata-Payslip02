@@ -4,7 +4,9 @@ namespace Payslipv02.Tax
 {
     public class TaxBrackets : ITaxBrackets
     {
-        private readonly TaxBracketInformation _taxInfo = new TaxBracketInformation();
+        private readonly TaxBracketInformation _taxInfo = new TaxBracketInformation(); //Remove dependency using factory method.
+        //private readonly ITaxBracketInformation _taxInfo = new TaxBracketInformation();
+        
         public Dictionary<string, double> Calculate(double annualSalary)
         {
             if (annualSalary > 180000)

@@ -1,6 +1,6 @@
 using System;
 
-namespace Payslipv02
+namespace Payslipv02.Superannuation
 {
     public class Superannuation
     {

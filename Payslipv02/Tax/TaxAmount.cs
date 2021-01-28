@@ -7,7 +7,7 @@ namespace Payslipv02.Tax
         public double CalculatePayPeriodTaxValue(double annualSalary)
         {
             var payPeriodsPerYear = 12;
-            var bracket = Factory.CreateTaxBrackets();
+            var bracket = Factory.Factory.CreateTaxBrackets();
             var taxBracket = bracket.Calculate(annualSalary);
             
             var taxAmount = Math.Round
