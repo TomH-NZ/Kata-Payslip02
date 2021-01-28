@@ -1,5 +1,6 @@
 using System;
 using Payslipv02;
+using Payslipv02.Tax;
 using Xunit;
 
 namespace Payslipv02UnitTests
@@ -34,10 +35,9 @@ namespace Payslipv02UnitTests
         {
             //Arrange
             var payPeriodTax = new TaxAmount();
-            var bracket = new TaxBrackets();
 
             //Act
-            var result = payPeriodTax.CalculatePayPeriodTaxValue(bracket, annualSalary);
+            var result = payPeriodTax.CalculatePayPeriodTaxValue(annualSalary);
 
             //Assert
             Assert.Equal(expected, result);

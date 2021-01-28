@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 
-namespace Payslipv02
+namespace Payslipv02.Tax
 {
-    public class TaxBracketInformation
+    public class TaxBracketInformation : ITaxBracketInformation
     {
-        public static readonly Dictionary<string, double> EighteenThousandTwoHundred = new Dictionary<string, double>
+        public readonly Dictionary<string, double> EighteenThousandTwoHundred = new Dictionary<string, double>
        {
            {"UpperBracketLimit", 18200},
            {"LowerBracketLimit", 0},
@@ -12,7 +12,7 @@ namespace Payslipv02
            {"PreviousBracketTaxTotal", 0}
        };
        
-       public static readonly Dictionary<string, double> ThirtySevenThousand = new Dictionary<string, double>
+       public readonly Dictionary<string, double> ThirtySevenThousand = new Dictionary<string, double>
        {
            {"UpperBracketLimit", 37000},
            {"LowerBracketLimit", 18201},
@@ -20,7 +20,7 @@ namespace Payslipv02
            {"PreviousBracketTaxTotal", 0}
        };
        
-       public static readonly Dictionary<string, double> EightySevenThousand = new Dictionary<string, double>
+       public readonly Dictionary<string, double> EightySevenThousand = new Dictionary<string, double>
        {
            {"UpperBracketLimit", 87000},
            {"LowerBracketLimit", 37001},
@@ -28,7 +28,7 @@ namespace Payslipv02
            {"PreviousBracketTaxTotal", 3572}
        };
        
-       public static readonly Dictionary<string, double> OneHundredEightyThousand = new Dictionary<string, double>
+       public readonly Dictionary<string, double> OneHundredEightyThousand = new Dictionary<string, double>
        {
            {"UpperBracketLimit", 180000},
            {"LowerBracketLimit", 87001},
@@ -36,7 +36,7 @@ namespace Payslipv02
            {"PreviousBracketTaxTotal", 19822}
        };
        
-       public static readonly Dictionary<string, double> OverOneHundredEightyThousand = new Dictionary<string, double>
+       public readonly Dictionary<string, double> OverOneHundredEightyThousand = new Dictionary<string, double>
        {
            {"UpperBracketLimit", 180001},
            {"LowerBracketLimit", 180001},

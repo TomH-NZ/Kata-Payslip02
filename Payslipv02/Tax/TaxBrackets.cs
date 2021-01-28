@@ -1,34 +1,33 @@
-using System;
 using System.Collections.Generic;
-using static Payslipv02.TaxBracketInformation;
 
-namespace Payslipv02
+namespace Payslipv02.Tax
 {
     public class TaxBrackets : ITaxBrackets
     {
+        private readonly TaxBracketInformation _taxInfo = new TaxBracketInformation();
         public Dictionary<string, double> Calculate(double annualSalary)
         {
             if (annualSalary > 180000)
             {
-                return OverOneHundredEightyThousand;
+                return _taxInfo.OverOneHundredEightyThousand;
             }
             
             if (annualSalary > 87000 && annualSalary <= 180000)
             {
-                return OverOneHundredEightyThousand;
+                return _taxInfo.OneHundredEightyThousand;
             }
             
             if (annualSalary > 37000 && annualSalary <= 87000)
             {
-                return EightySevenThousand;
+                return _taxInfo.EightySevenThousand;
             }
             
             if (annualSalary > 18200 && annualSalary <= 37000)
             {
-                return ThirtySevenThousand;
+                return _taxInfo.ThirtySevenThousand;
             }
 
-            return EighteenThousandTwoHundred;
+            return _taxInfo.EighteenThousandTwoHundred;
         }
     }
 }
