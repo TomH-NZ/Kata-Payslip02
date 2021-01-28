@@ -29,13 +29,15 @@ namespace Payslipv02UnitTests
         [InlineData(30000, 187)]
         [InlineData(100000, 2053)]
         [InlineData(200000, 5269)]
+        [InlineData(18000, 0)]
         public void ReturnCorrectPeriodTaxAmountWhenGivenAnAnnualSalary(double annualSalary, double expected)
         {
             //Arrange
-            var tax = new Tax();
+            var payPeriodTax = new TaxAmount();
+            var bracket = new TaxBrackets();
 
             //Act
-            var result = tax.Calculate(annualSalary);
+            var result = payPeriodTax.CalculatePayPeriodTaxValue(bracket, annualSalary);
 
             //Assert
             Assert.Equal(expected, result);

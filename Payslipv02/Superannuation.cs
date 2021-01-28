@@ -6,11 +6,11 @@ namespace Payslipv02
     {
         public double CalculateValue(double payPeriodIncome)
         {
-            const double SuperannuationRate = 9;
+            const double superannuationRate = 9;
 
-            var SuperannuationAmount = Math.Round(payPeriodIncome * SuperannuationRate / 100, MidpointRounding.ToEven);
+            var superannuationAmount = Math.Round(payPeriodIncome * superannuationRate / 100, MidpointRounding.ToEven);
 
-            return SuperannuationAmount;
+            return superannuationAmount;
         }
     }
 }

@@ -1,6 +1,6 @@
 namespace Payslipv02
 {
-    public enum Bracket
+    public enum IncomeBrackets
     {
         EighteenThousandTwoHundred,
         ThirtySevenThousand,
