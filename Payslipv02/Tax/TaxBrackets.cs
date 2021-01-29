@@ -1,11 +1,13 @@
 using System.Collections.Generic;
+using Payslipv02.FactoryDirectory;
 
 namespace Payslipv02.Tax
 {
     public class TaxBrackets : ITaxBrackets
     {
         private readonly TaxBracketInformation _taxInfo = new TaxBracketInformation(); //Remove dependency using factory method.
-        //private readonly ITaxBracketInformation _taxInfo = new TaxBracketInformation();
+
+        //private ITaxBracketInformation _taxInfo = Factory.NewTaxBracketInformation();
         
         public Dictionary<string, double> Calculate(double annualSalary)
         {

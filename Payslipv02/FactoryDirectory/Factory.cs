@@ -1,6 +1,6 @@
 using Payslipv02.Tax;
 
-namespace Payslipv02.Factory
+namespace Payslipv02.FactoryDirectory
 {
     public static class Factory
     {

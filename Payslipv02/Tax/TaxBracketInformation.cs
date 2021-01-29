@@ -43,5 +43,7 @@ namespace Payslipv02.Tax
            {"TaxPercent", 45},
            {"PreviousBracketTaxTotal", 54232}
        };
+
+       private ITaxBracketInformation _taxBracketInformationImplementation;
     }
 }

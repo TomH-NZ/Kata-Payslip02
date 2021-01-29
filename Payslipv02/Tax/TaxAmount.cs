@@ -1,4 +1,5 @@
 using System;
+using Payslipv02.FactoryDirectory;
 
 namespace Payslipv02.Tax
 {
@@ -7,7 +8,7 @@ namespace Payslipv02.Tax
         public double CalculatePayPeriodTaxValue(double annualSalary)
         {
             var payPeriodsPerYear = 12;
-            var bracket = Factory.Factory.CreateTaxBrackets();
+            var bracket = Factory.CreateTaxBrackets();
             var taxBracket = bracket.Calculate(annualSalary);
             
             var taxAmount = Math.Round
