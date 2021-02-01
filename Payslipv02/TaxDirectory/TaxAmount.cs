@@ -1,7 +1,7 @@
 using System;
 using Payslipv02.FactoryDirectory;
 
-namespace Payslipv02.Tax
+namespace Payslipv02.TaxDirectory
 {
     public class TaxAmount
     {

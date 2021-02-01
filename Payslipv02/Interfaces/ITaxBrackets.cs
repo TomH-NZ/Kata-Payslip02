@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Payslipv02
+namespace Payslipv02.Interfaces
 {
     public interface ITaxBrackets
     {
