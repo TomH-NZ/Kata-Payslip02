@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using Payslipv02.Interfaces;
 
-namespace Payslipv02.Tax
+namespace Payslipv02.TaxDirectory
 {
     public class TaxBracketInformation : ITaxBracketInformation
     {
@@ -43,7 +44,5 @@ namespace Payslipv02.Tax
            {"TaxPercent", 45},
            {"PreviousBracketTaxTotal", 54232}
        };
-
-       private ITaxBracketInformation _taxBracketInformationImplementation;
     }
 }

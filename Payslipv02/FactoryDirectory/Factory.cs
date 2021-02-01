@@ -1,4 +1,5 @@
-using Payslipv02.Tax;
+using Payslipv02.Interfaces;
+using Payslipv02.TaxDirectory;
 
 namespace Payslipv02.FactoryDirectory
 {

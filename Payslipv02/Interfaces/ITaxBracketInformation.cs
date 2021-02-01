@@ -1,6 +1,5 @@
-using System.Collections.Generic;
 
-namespace Payslipv02.Tax
+namespace Payslipv02.Interfaces
 {
     public interface ITaxBracketInformation
     {

@@ -1,4 +1,5 @@
-using Payslipv02.Superannuation;
+using Payslipv02.SalaryDirectory;
+using Payslipv02.SuperannuationDirectory;
 using Payslipv02.Tax;
 using Xunit;
 
@@ -40,6 +41,20 @@ namespace Payslipv02UnitTests
 
             //Assert
             Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void ReturnCorrectPayPeriodAmountWhenGivenAnAnnualSalary()
+        {
+            //Arrange
+            var payAmount = new Salary();
+            double annualSalary = 120000;
+
+            //Act
+            var result = payAmount.PayPeriodAmount(annualSalary);
+
+            //Assert
+            Assert.Equal(10000, result);
         }
     }
 }
