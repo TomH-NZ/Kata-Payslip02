@@ -2,7 +2,7 @@ using System;
 
 namespace Payslipv02.SuperannuationDirectory
 {
-    public class Superannuation
+    public class Superannuation : ISuperannuation
     {
         public double CalculateValue(double payPeriodIncome, double superannuationRate)
         {

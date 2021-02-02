@@ -60,5 +60,23 @@ namespace Payslipv02UnitTests
             //Assert
             Assert.Equal(expected, result);
         }
+
+        [Theory]
+        [InlineData(120000, 7331)]
+        [InlineData(50000, 3517)]
+        [InlineData(15000, 1250)]
+        [InlineData(24000, 1908)]
+        public void ReturnCorrectNetPayPeriodAmountWhenGivenAnAnnualSalary(double annualSalary, double expected)
+        {
+            //Arrange
+            var newTax = new TaxAmount();
+            var newSalary = new Salary();
+
+            //Act
+            var result = newSalary.PayPeriodAmount(annualSalary) - newTax.CalculatePayPeriodTaxValue(annualSalary);
+
+            //Assert
+            Assert.Equal(expected, result);
+        }
     }
 }

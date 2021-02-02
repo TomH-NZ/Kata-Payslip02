@@ -3,7 +3,7 @@ using Payslipv02.FactoryDirectory;
 
 namespace Payslipv02.TaxDirectory
 {
-    public class TaxAmount
+    public class TaxAmount : ITaxAmount
     {
         public double CalculatePayPeriodTaxValue(double annualSalary)
         {

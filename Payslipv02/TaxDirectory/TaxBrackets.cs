@@ -5,7 +5,7 @@ namespace Payslipv02.TaxDirectory
 {
     public class TaxBrackets : ITaxBrackets
     {
-        private readonly TaxBracketInformation _taxInfo = new TaxBracketInformation(); //Remove dependency using factory method.
+        private readonly TaxBracketInformation _taxInfo = new TaxBracketInformation(); //ToDo: Remove dependency using factory method.
 
         //private ITaxBracketInformation _taxInfo = Factory.NewTaxBracketInformation();
         

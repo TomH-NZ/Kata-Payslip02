@@ -1,3 +1,4 @@
+using System;
 
 namespace Payslipv02.SalaryDirectory
 {
@@ -7,7 +8,7 @@ namespace Payslipv02.SalaryDirectory
         {
             const double payPeriodsPerYear = 12;
 
-            return annualSalary / payPeriodsPerYear;
+            return Math.Round(annualSalary / payPeriodsPerYear, MidpointRounding.ToEven);
         }
     }
 }
