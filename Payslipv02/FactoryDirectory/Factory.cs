@@ -37,5 +37,10 @@ namespace Payslipv02.FactoryDirectory
         {
             return new PayslipGenerator();
         }
+
+        public static INumberVariables NewPayslipCalculationVariables()
+        {
+            return new NumberVariables();
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace Payslipv02.SalaryDirectory
     {
         public double PayPeriodAmount(double annualSalary)
         {
-            const double payPeriodsPerYear = 12;
+            const double payPeriodsPerYear = 12; //ToDo: pay periods per year
 
             return Math.Round(annualSalary / payPeriodsPerYear, MidpointRounding.ToEven);
         }

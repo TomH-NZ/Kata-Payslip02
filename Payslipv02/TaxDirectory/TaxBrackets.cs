@@ -1,32 +1,32 @@
 using System.Collections.Generic;
+using Payslipv02.FactoryDirectory;
 using Payslipv02.Interfaces;
 
 namespace Payslipv02.TaxDirectory
 {
     public class TaxBrackets : ITaxBrackets
     {
-        private readonly TaxBracketInformation _taxInfo = new TaxBracketInformation(); //ToDo: Remove dependency using factory method.
-
-        //private ITaxBracketInformation _taxInfo = Factory.NewTaxBracketInformation();
+        private readonly ITaxBracketInformation _taxInfo = Factory.NewTaxBracketInformation();
+        private readonly INumberVariables _payslipCalculationVariables = Factory.NewPayslipCalculationVariables();
         
         public Dictionary<string, double> Calculate(double annualSalary)
         {
-            if (annualSalary > 180000)
+            if (annualSalary > _payslipCalculationVariables.OneHundredEightyThousand)
             {
                 return _taxInfo.OverOneHundredEightyThousand;
             }
             
-            if (annualSalary > 87000 && annualSalary <= 180000)
+            if (annualSalary > _payslipCalculationVariables.EightySevenThousand && annualSalary <= _payslipCalculationVariables.OneHundredEightyThousand)
             {
                 return _taxInfo.OneHundredEightyThousand;
             }
             
-            if (annualSalary > 37000 && annualSalary <= 87000)
+            if (annualSalary > _payslipCalculationVariables.ThirtySevenThousand && annualSalary <= _payslipCalculationVariables.EightySevenThousand)
             {
                 return _taxInfo.EightySevenThousand;
             }
             
-            if (annualSalary > 18200 && annualSalary <= 37000)
+            if (annualSalary > _payslipCalculationVariables.EighteenThousandTwoHundred && annualSalary <= _payslipCalculationVariables.ThirtySevenThousand)
             {
                 return _taxInfo.ThirtySevenThousand;
             }

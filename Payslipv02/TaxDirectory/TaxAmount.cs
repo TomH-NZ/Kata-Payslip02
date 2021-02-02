@@ -7,7 +7,7 @@ namespace Payslipv02.TaxDirectory
     {
         public double CalculatePayPeriodTaxValue(double annualSalary)
         {
-            var payPeriodsPerYear = 12;
+            var payPeriodsPerYear = 12; // ToDo: pay periods per year
             var bracket = Factory.CreateTaxBrackets();
             var taxBracket = bracket.Calculate(annualSalary);
             

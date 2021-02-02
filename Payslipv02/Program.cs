@@ -1,5 +1,4 @@
 ﻿using Payslipv02.FactoryDirectory;
-using Payslipv02.PayslipDirectory;
 
 namespace Payslipv02
 {
